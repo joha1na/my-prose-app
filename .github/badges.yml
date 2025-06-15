@@ -1,0 +1,11 @@
+name: "Build Status"
+description: "Build Status Badge"
+color: "green"
+---
+name: "Release"
+description: "Latest Release Version"
+color: "blue"
+---
+name: "License"
+description: "Project License"
+color: "orange"
