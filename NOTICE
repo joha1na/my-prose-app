@@ -1,0 +1,43 @@
+# NOTICE
+
+## Project Metadata
+
+**My Prose App**  
+Version: 1.1.0  
+This content is produced and maintained by Jana Maire  
+Website: https://github.com/joha1na/my-prose-app
+
+## License Information
+
+This project is licensed under the GNU General Public License v3.0.
+A copy of this license can be found in the LICENSE file in the root directory of this distribution and at https://www.gnu.org/licenses/gpl-3.0.html.
+
+## Third-Party Components
+
+This software includes the following third-party components:
+
+### prose-builder library
+
+This product includes software developed by HTW Berlin (FB4 OSSD).
+License: GPL-3.0
+Repository: https://github.com/bs-jokri/prose-builder
+
+### JUnit
+
+This product includes JUnit testing framework.
+License: Eclipse Public License - v 1.0
+Website: https://junit.org/junit4/
+
+### Maven Dependencies
+
+This product uses several Apache Maven plugins and dependencies.
+License: Apache License, Version 2.0
+Website: https://maven.apache.org/
+
+## Cryptography
+
+This software does not implement or use cryptographic functionality.
+
+----
+
+Please note that this NOTICE file does not replace the individual licenses of the third-party components listed above. For actual licenses, refer to the respective project documentation and license files.

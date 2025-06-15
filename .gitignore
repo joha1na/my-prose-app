@@ -1,4 +1,6 @@
+# OS generated files
 .DS_Store
+Thumbs.db
 
 # Maven specific files
 target/
@@ -36,6 +38,15 @@ buildNumber.properties
 # Java specific files
 # Compiled class file
 *.class
+
+# IntelliJ IDEA specific files
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
 
 # Log file
 *.log
