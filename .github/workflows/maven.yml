@@ -9,6 +9,12 @@ on:
   pull_request:
     branches: [ "main" ]
 
+permissions:
+  contents: read
+  issues: read
+  checks: write
+  pull-requests: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -56,3 +62,5 @@ jobs:
       if: always()
       with:
         files: target/surefire-reports/*.xml
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
