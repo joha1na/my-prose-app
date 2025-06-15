@@ -2,9 +2,14 @@
 
 A Java project demonstrating text composition using sentence and prose elements.
 
-[![License: GPL-3.0](https://img.shields.io/badge/License-GPL--3.0-orange.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![Build Status](https://img.shields.io/github/actions/workflow/status/joha1na/my-prose-app/maven.yml?branch=main&label=CI)](https://github.com/joha1na/my-prose-app/actions/workflows/maven.yml)
 [![Release](https://img.shields.io/github/v/release/joha1na/my-prose-app)](https://github.com/joha1na/my-prose-app/releases)
+[![Maven Central](https://img.shields.io/maven-central/v/de.htw_berlin.fb4.examples/prose_library?color=brightgreen)](https://search.maven.org/artifact/de.htw_berlin.fb4.examples/prose_library)
+[![License: GPL-3.0](https://img.shields.io/badge/License-GPL--3.0-orange.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![Java](https://img.shields.io/badge/Java-23-blue.svg)](https://www.oracle.com/java/technologies/javase/jdk23-archive-downloads.html)
+[![JUnit](https://img.shields.io/badge/JUnit-4.13.2-brightgreen.svg)](https://junit.org/junit4/)
+[![JavaDoc](https://img.shields.io/badge/JavaDoc-Online-green.svg)](https://joha1na.github.io/my-prose-app/apidocs/)
+[![Issues](https://img.shields.io/github/issues/joha1na/my-prose-app)](https://github.com/joha1na/my-prose-app/issues)
 
 ## Description
 
