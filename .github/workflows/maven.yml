@@ -21,11 +21,34 @@ jobs:
         java-version: '23'
         distribution: 'temurin'
         cache: maven
+        server-id: github
+        server-username: GITHUB_ACTOR
+        server-password: GITHUB_TOKEN
+    - name: Create settings.xml
+      run: |
+        mkdir -p ~/.m2
+        echo "<settings xmlns=\"http://maven.apache.org/SETTINGS/1.0.0\"
+                xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"
+                xsi:schemaLocation=\"http://maven.apache.org/SETTINGS/1.0.0
+                                    http://maven.apache.org/xsd/settings-1.0.0.xsd\">
+                <servers>
+                  <server>
+                    <id>github</id>
+                    <username>${{ github.actor }}</username>
+                    <password>${{ secrets.PROSE_BUILDER_PAT }}</password>
+                  </server>
+                </servers>
+              </settings>" > ~/.m2/settings.xml
+    
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+      env:
+        GITHUB_TOKEN: ${{ secrets.PROSE_BUILDER_PAT }}
 
     - name: Generate JavaDoc
       run: mvn javadoc:javadoc
+      env:
+        GITHUB_TOKEN: ${{ secrets.PROSE_BUILDER_PAT }}
 
     # Optional: Publish test results
     - name: Publish Test Results
