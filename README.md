@@ -2,6 +2,10 @@
 
 A Java project demonstrating text composition using sentence and prose elements.
 
+[![License: GPL-3.0](https://img.shields.io/badge/License-GPL--3.0-orange.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/joha1na/my-prose-app/maven.yml?branch=main&label=CI)](https://github.com/joha1na/my-prose-app/actions/workflows/maven.yml)
+[![Release](https://img.shields.io/github/v/release/joha1na/my-prose-app)](https://github.com/joha1na/my-prose-app/releases)
+
 ## Description
 
 My Prose App is a project that implements and demonstrates the usage of the prose_builder library to showcase text composition capabilities. The project provides a practical demonstration of how to work with textual elements, convert between different text representations, and construct more complex texts from simple components using the Prose and Sentence interfaces.
@@ -15,6 +19,8 @@ The core of this project is the `prose_library` component, which implements the 
 - Simple text composition mechanism
 - Maven-based build system
 - Comprehensive documentation
+- Continuous Integration via GitHub Actions
+- Complete Open Source compliance documentation
 
 ## Project Structure
 
@@ -72,7 +78,7 @@ This project is licensed under the [GNU General Public License v3.0](LICENSE).
 
 ## Contributing
 
-We welcome contributions to the My Prose App project! Here's how you can contribute:
+We welcome contributions to the My Prose App project! Please see our [Contributing Guidelines](CONTRIBUTING.md) for detailed information. For code of conduct, see [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ### Contribution Workflow
 
@@ -108,7 +114,11 @@ We welcome contributions to the My Prose App project! Here's how you can contrib
 
 If you find a bug or have a suggestion for improvement:
 1. Check if the issue already exists in the GitHub issues
-2. If not, create a new issue with a clear description and reproduction steps
+2. If not, create a new issue using one of our issue templates with a clear description and reproduction steps
+
+### Security
+
+For security-related issues, please review our [Security Policy](SECURITY.md) before submitting a report.
 
 ## Author
 

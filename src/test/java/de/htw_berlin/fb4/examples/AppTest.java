@@ -40,9 +40,10 @@
 
 package de.htw_berlin.fb4.examples;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import static org.junit.Assert.*;
+import org.junit.Test;
+import org.junit.Before;
+import org.junit.After;
 
 import de.htw_berlin.fb4.ossd.prose.Prose;
 import de.htw_berlin.fb4.ossd.prose.Sentence;
@@ -51,28 +52,27 @@ import de.htw_berlin.fb4.ossd.prose.ProseBuilder;
 /**
  * Unit tests for the Prose and Sentence implementations.
  */
-public class AppTest extends TestCase {
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public AppTest(String testName) {
-        super(testName);
+public class AppTest {
+    private Sentence sentence;
+    private Prose prose;
+    
+    @Before
+    public void setUp() {
+        sentence = new SimpleSentence();
+        prose = new SimpleProse();
     }
-
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite() {
-        return new TestSuite(AppTest.class);
+    
+    @After
+    public void tearDown() {
+        sentence = null;
+        prose = null;
     }
 
     /**
      * Test the SimpleSentence class functionality
      */
+    @Test
     public void testSimpleSentence() {
-        Sentence sentence = new SimpleSentence();
         assertNotNull("Sentence should not be null", sentence);
         assertNotNull("Sentence content should not be null", sentence.get());
         assertTrue("Sentence should contain text", sentence.get().length() > 0);
@@ -81,8 +81,8 @@ public class AppTest extends TestCase {
     /**
      * Test the SimpleProse class functionality
      */
+    @Test
     public void testSimpleProse() {
-        Prose prose = new SimpleProse();
         assertNotNull("Prose should not be null", prose);
         assertNotNull("Prose content should not be null", prose.get());
         assertTrue("Prose should contain text", prose.get().length() > 0);
@@ -91,26 +91,25 @@ public class AppTest extends TestCase {
     /**
      * Test the conversion from Prose to Sentence
      */
+    @Test
     public void testConversion() {
-        Prose prose = new SimpleProse();
-        Sentence sentence = SimpleSentence.toSentence(prose);
+        Sentence convertedSentence = SimpleSentence.toSentence(prose);
         
-        assertNotNull("Converted sentence should not be null", sentence);
+        assertNotNull("Converted sentence should not be null", convertedSentence);
         assertEquals("Converted sentence should contain the prose text", 
-                     prose.get(), sentence.get());
+                     prose.get(), convertedSentence.get());
     }
 
     /**
      * Test the ProseBuilder with our implementations
      */
+    @Test
     public void testProseBuilder() {
-        Sentence s1 = new SimpleSentence();
-        Prose prose = new SimpleProse();
-        Sentence s3 = SimpleSentence.toSentence(prose);
-        
         ProseBuilder pb = new ProseBuilder();
-        pb.register(s1);
-        pb.register(s3);
+        pb.register(sentence);
+        
+        Sentence convertedSentence = SimpleSentence.toSentence(prose);
+        pb.register(convertedSentence);
         
         String result = pb.get();
         assertNotNull("ProseBuilder result should not be null", result);
